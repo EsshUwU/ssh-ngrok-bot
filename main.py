@@ -9,8 +9,9 @@ import time
 # Load environment variables
 load_dotenv()
 DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
-CHANNEL_ID = os.getenv("CHANNEL_ID")
+CHANNEL_ID = int(os.getenv("CHANNEL_ID"))
 username = os.getenv("username")
+discord_id = int(os.getenv("discord_id"))
 
 intents = discord.Intents.default()
 intents.message_content = True 
@@ -49,7 +50,8 @@ async def on_ready():
         ssh_link = start_ngrok()
         await channel.send("===== ✅ Ngrok Tunnel ready=====")
         await channel.send(f"{ssh_link}")
-        await channel.send("===== ✅ Ngrok Tunnel ready=====")
+        await channel.send(f"===== ✅ Ngrok Tunnel ready <@{discord_id}> =====")
+        print("Ngrok tunnel started and ready to use.")
 
 @bot.command()
 async def restart(ctx):
