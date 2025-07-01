@@ -58,6 +58,7 @@ Create a `.env` file in your project directory:
 DISCORD_TOKEN=your_discord_bot_token
 CHANNEL_ID=your_channel_id_as_integer
 username=your_linux_username
+discord_id=your_discord_id
 ```
 
 ---
