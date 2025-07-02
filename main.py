@@ -115,6 +115,6 @@ async def ssh_restart(ctx):
 
 
 
-bot.run(DISCORD_TOKEN)
+bot.run(DISCORD_TOKEN) # Run the bot with the token from .env file
 
 
